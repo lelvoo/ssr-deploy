@@ -6,9 +6,9 @@ export PATH
 install_ssr(){
 	cd /opt
 	echo 'SSR下载中...'
-	git clone https://github.com/lelvoo/shadowsocksr-ssrpanel.git
-    cd shadowsocksr
-    sh initcfg.sh
+	git clone https://github.com/lelvoo/shadowsocksr-ssrpanel.git shadowsocksr
+    	cd shadowsocksr
+    	sh initcfg.sh
 	echo '开始配置节点连接信息...'
 	stty erase '^H' && read -p "数据库服务器地址:" mysqlserver
 	stty erase '^H' && read -p "数据库名称:" database
