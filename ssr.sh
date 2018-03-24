@@ -29,10 +29,10 @@ install_ssr(){
     apt-get install supervisor -y
     touch /etc/supervisor/conf.d/ssr.conf
     echo "[program:ssr]
-          command=python /opt/shadowsocksr/server.py 
-          autorestart=true
-          autostart=true
-          user=root
+    command=python /opt/shadowsocksr/server.py
+    autorestart=true
+    autostart=true
+    user=root
     ">>/etc/supervisor/conf.d/ssr.conf
     echo "ulimit -n 1024000">>/etc/default/supervisor
     /etc/init.d/supervisor restart
