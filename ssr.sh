@@ -27,13 +27,9 @@ install_ssr(){
     apt-get install python-pip -y
     pip install cymysql
     apt-get install supervisor -y
-    touch /etc/supervisor/conf.d/ssr.conf
-    echo "[program:ssr]
-    command=python /opt/shadowsocksr/server.py
-    autorestart=true
-    autostart=true
-    user=root
-    ">>/etc/supervisor/conf.d/ssr.conf
+    echo "edit config"
+    wget -N --no-check-certificate https://raw.githubusercontent.com/lelvoo/ssr-deploy/master/ssr.conf
+    cp ssr.conf /etc/supervisor/conf.d/ssr.conf
     echo "ulimit -n 1024000">>/etc/default/supervisor
     /etc/init.d/supervisor restart
     supervisorctl restart ssr
