@@ -4,7 +4,7 @@ export PATH
 [ $(id -u) != "0" ] && { echo "Error: You must be root to run this script"; exit 1; }
 
 install_ssr(){
-	cd /opt/
+	cd /opt
 	echo 'SSR下载中...'
 	git clone https://github.com/lelvoo/shadowsocksr-ssrpanel.git
     cd shadowsocksr
