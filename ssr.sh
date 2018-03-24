@@ -6,7 +6,8 @@ export PATH
 install_ssr(){
 	cd /opt
 	echo 'SSR下载中...'
-	git clone https://github.com/lelvoo/shadowsocksr-ssrpanel.git shadowsocksr
+	git clone https://github.com/lelvoo/shadowsocksr-ssrpanel.git
+	mv shadowsocksr-ssrpanel shadowsocksr
     	cd shadowsocksr
     	sh initcfg.sh
 	echo '开始配置节点连接信息...'
